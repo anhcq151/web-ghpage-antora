@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PlayIO VPN :: Play-IoT Documentation</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">Play-IoT Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="playio-vpn-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">PlayIO VPN Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">VPN Infrastructure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="OVERVIEW.html">How it set up</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developer Guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="guide_dev/SETUP.html">Setup Development Environment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guide_dev/DEV.html">Developing VPN tools</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">User Guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="guide_user/VPNC_README.html">Client CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guide_user/cmd.html">Secret Tool</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="guide_user/client_deployment.html">Deploying</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="guide_user/VPN_DDNS.html">Dynamic Client Name Resolving</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">PlayIO VPN Docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">PlayIO VPN Docs</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">PlayIO VPN Docs</a></li>
+    <li><a href="index.html">VPN Infrastructure</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/play-iot/iot-vpn/edit/feature/documentation-pages/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">PlayIO VPN</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Play-IO</strong> IIoT VPN solution</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<div class="sectionbody">
+<div id="img-vpnserver" class="imageblock">
+<div class="content">
+<img src="_images/vpnserver.png" alt="softether" width="75%">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_server_infrastructure"><a class="anchor" href="#_server_infrastructure"></a>Server Infrastructure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Play-IO VPN solution provides secured connection to Corporate infrastructure as well as centralized user, iot device and credential management</p>
+</div>
+<div class="sect2">
+<h3 id="_vpn_server"><a class="anchor" href="#_vpn_server"></a>VPN Server</h3>
+<div class="paragraph">
+<p>Server configuration is described <a href="OVERVIEW.html" class="xref page">here</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vpn_ddns"><a class="anchor" href="#_vpn_ddns"></a>VPN DDNS</h3>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://hub.docker.com/r/playio/vpnddns/tags?page=1&amp;ordering=last_updated"><img src="https://img.shields.io/docker/v/playio/vpnddns?sort=semver" alt="Docker Image Version (latest semver)"></a></span> <span class="image"><a class="image" href="https://hub.docker.com/r/playio/vpnddns/tags?page=1&amp;ordering=last_updated"><img src="https://img.shields.io/docker/image-size/playio/vpnddns?sort=semver" alt="Docker Image Size (latest semver)"></a></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>CLI</code> application syncs every 2 minutes VPN client IP addresses to private Google Cloud DNS:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DNS zone name for each customer: <code>device.&lt;customer-code&gt;</code></p>
+</li>
+<li>
+<p>Device DNS name: <code>&lt;device-hostname&gt;.device.&lt;customer-code&gt;</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_client_infrastructure"><a class="anchor" href="#_client_infrastructure"></a>Client Infrastructure</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_client_tool_vpnc"><a class="anchor" href="#_client_tool_vpnc"></a>Client Tool (VPNC)</h3>
+<div class="sect3">
+<h4 id="_supported_operating_system"><a class="anchor" href="#_supported_operating_system"></a>Supported Operating system</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Distro</th>
+<th class="tableblock halign-left valign-top">Release</th>
+<th class="tableblock halign-left valign-top">Architecture</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Raspbian</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stretch/Buster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10004;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BeagleBoard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stretch/Buster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10004;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenWRT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18.x/19.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>Mips</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10004;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ubuntu</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16.x/18.x/20.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10004;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Debian</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">9/10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#10004;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fedora</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31/32/33</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-exclamation-triangle"></i></span> <a href="https://github.com/play-iot/iot-vpn/issues/10">SELinux</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CentOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6/7/8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-exclamation-triangle"></i></span> <a href="https://github.com/play-iot/iot-vpn/issues/10">SELinux</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RHEL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x/8.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ARMv7</code>/<code>ARM64</code>/<code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-exclamation-triangle"></i></span> <a href="https://github.com/play-iot/iot-vpn/issues/10">SELinux</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8/10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-exclamation-triangle"></i></span> <a href="https://www.softether.org/">SoftetherVPN</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MacOS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x/8.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-square"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Android</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.x/8.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>x86_64</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="icon"><i class="fa fa-square"></i></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_supported_dns_resolvers"><a class="anchor" href="#_supported_dns_resolvers"></a>Supported DNS resolvers</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input><code>NetworkManager</code></p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input><code>systemd-resolver</code></p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input><code>resolvconf</code></p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input><code>openresolv</code></p>
+</li>
+<li>
+<p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"></input><code>connman</code> <a href="https://github.com/play-iot/iot-vpn/issues/91"><span class="icon"><i class="fa fa-exclamation-triangle"></i></span> Manual step</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_how_to_use"><a class="anchor" href="#_how_to_use"></a>How to use</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="guide_user/VPNC_README.html" class="xref page">VPNC Client tool</a></p>
+</li>
+<li>
+<p><a href="guide_user/cmd.html" class="xref page">Secret Utilities</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_client_deployer_vpnc_deployer"><a class="anchor" href="#_client_deployer_vpnc_deployer"></a>Client Deployer (VPNC Deployer)</h3>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://hub.docker.com/r/playio/vpnc-deployer/tags?page=1&amp;ordering=last_updated"><img src="https://img.shields.io/docker/v/playio/vpnc-deployer?sort=semver" alt="Docker Image Version (latest semver)"></a></span> <span class="image"><a class="image" href="https://hub.docker.com/r/playio/vpnc-deployer/tags?page=1&amp;ordering=last_updated"><img src="https://img.shields.io/docker/image-size/playio/vpnc-deployer?sort=semver" alt="Docker Image Size (latest semver)"></a></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>CLI</code> tool based on <code>ansible</code> and <code>docker</code> to mass deploy VPN client on one or many devices/computers.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_contribute"><a class="anchor" href="#_how_to_contribute"></a>How to contribute</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please read <a href="guide_dev/SETUP.html" class="xref page">Development Setup Guide</a> to setup your environment.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

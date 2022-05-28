@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VPN DDNS k8s job :: Play-IoT Documentation</title>
+    <meta name="generator" content="Antora 3.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Play-IoT Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="playio-vpn-docs" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">PlayIO VPN Docs</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">VPN Infrastructure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../OVERVIEW.html">How it set up</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developer Guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../guide_dev/SETUP.html">Setup Development Environment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guide_dev/DEV.html">Developing VPN tools</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">User Guide</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="VPNC_README.html">Client CLI</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cmd.html">Secret Tool</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client_deployment.html">Deploying</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="VPN_DDNS.html">Dynamic Client Name Resolving</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">PlayIO VPN Docs</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">PlayIO VPN Docs</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">PlayIO VPN Docs</a></li>
+    <li>User Guide</li>
+    <li><a href="VPN_DDNS.html">Dynamic Client Name Resolving</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/play-iot/iot-vpn/edit/feature/documentation-pages/docs/modules/guide_user/pages/VPN_DDNS.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">VPN DDNS k8s job</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Query VPN client session based on <code>hostname</code>, <code>vpn ip address</code> then create DNS record in <a href="https://console.cloud.google.com/net-services/dns/zones">Cloud DNS</a>.
+The job is setup to run on k8s cronjob</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use this <a href="https://github.com/zero-88/devops-utils/tree/master/k8s">utility</a></p>
+</li>
+<li>
+<p>Cronjob manifest:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/play-iot/iot-vpn/blob/main/cli/k8s/ddns/10_create-config-secret.sh">10_create-config-secret.sh</a> Create config/secret</p>
+</li>
+<li>
+<p><a href="https://github.com/play-iot/iot-vpn/blob/main/cli/k8s/ddns/11_vpn-dns-sync-cronjob.yaml">11_vpn-dns-sync-cronjob.yaml</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment_steps"><a class="anchor" href="#_deployment_steps"></a>Deployment steps</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Prepare <code>google-service-account.json</code> with right permission to update Cloud DNS records.</p>
+</li>
+<li>
+<p>Copy and fill information based on a customer code.
+For example: <code>playio</code> is customer code</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/play-iot/iot-vpn/blob/main/cli/k8s/ddns/customer.env.tmpl">customer.env.tmpl</a> = playio.env</p>
+</li>
+<li>
+<p><a href="https://github.com/play-iot/iot-vpn/blob/main/cli/k8s/ddns/customer.secret.env.tmpl">customer.secret.env.tml</a> = playio.secret.env</p>
+</li>
+<li>
+<p><a href="https://github.com/play-iot/iot-vpn/blob/main/cli/k8s/ddns/.runner.env.tmpl">.runner.env.tmpl</a> = .prod.env</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Checkout <a href="https://github.com/zero-88/devops-utils/tree/master/k8s">utility</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">PROJECT_DIR=&lt;your-path&gt;
+python deploy.py -e prod -m gcp -d $PROJECT_DIR/cli/k8s/ddns</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
